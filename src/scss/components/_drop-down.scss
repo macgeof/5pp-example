@@ -1,0 +1,253 @@
+.dropdown{
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+    *{
+        list-style-type: none;
+        display: block;
+        color: v(color-1);
+        text-decoration:none;
+    }
+    /********** Generic DropDown **********/
+    &.generic-dropdown{
+        .dropdown__item{ 
+            position:relative;
+            &--dropdown{
+                a{
+                    color: v(light);
+                }
+                div{
+                    display: block;
+                    position: relative;
+                    ul{
+                        display: block;
+                        li{
+                            a{
+                                padding: 1rem;
+                                background-color: v(color-2);
+                                text-decoration: none;
+                                color: v(light); 
+                                
+                                span{
+                                    transition: all .3s linear;
+                                    color: v(light); 
+                                }
+                                &:hover{
+                                     span{
+                                        transform: translateX(.15rem);
+                                     }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .dropdown__link{
+                position:relative;
+                padding: 1rem;  
+                width: auto; 
+                position: relative;
+                transition: color .3s linear;
+                display:flex;
+                justify-content: space-between;
+                align-content: center;
+                align-items: center;
+                .icon{
+                    &::before{
+                        background-color: v(light);
+                    }
+                }
+                
+            }
+        }
+        .dropdown__submenu{  
+            position: absolute;
+            width:100%;
+            top: 120%;
+            left:0;
+            &::before{
+                content:"";
+                position: absolute;
+                top: -5px; 
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0; 
+                height: 0; 
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid v(color-2);
+            }
+        } 
+    }
+    /********** SIDE NAVIGATION **********/
+    &.side-nav{
+        // Submenu animation
+        .dropdown__submenu{  
+            transform: scaleY(0);
+            height:0;
+            transition: transform  .3s;
+            transform-origin: left top;
+            height: 0;
+            &.active{
+                height: auto;
+                max-height:100%;
+                width: 100%;
+                transform: scaleY(1);
+                animation: dropdown 1s ease-in-out;
+            }
+            
+        } 
+        // Dropdown link 
+        .dropdown__item{ 
+                position:relative;
+                text-transform: uppercase;
+                .dropdown__link{
+                    position:relative;
+                    padding: 1.5rem;  
+                    width: 100%; 
+                    position: relative;
+                    transition: color .3s linear;
+                    display:flex;
+                    align-items: center;
+                    span{
+                        transition: color .3s linear;
+                        
+                    }
+                    &:hover{
+                        color: v(light);
+                        .icon{
+                            &::before{
+                                background-color: v(light);
+                            }
+                        }
+                        span{
+                            color: v(light);
+                        }
+                      
+                    }
+                    &:active{
+                        color: v(light);
+                        span{
+                            color: v(light);
+                        }
+                
+                    }
+                    &::before{
+                        transition:  .3s linear;
+                        z-index: -1;
+                        content: '';
+                        position: absolute;
+                        top:0;
+                        left: 0;
+                        height: 100%;
+                        width: 3px;
+                        //background-color: v(color-1);
+                        transform: scaleY(0);
+                        transition: transform .2s,
+                                    width .4s cubic-bezier(1,0,0,1) .2s,// run multiple transitions and add a delay to this one
+                                    background-color .1s;
+                    }
+                    &:hover{
+                        &::before{
+                            transform: scaleY(1);
+                            width: 100%;
+                        }
+                    }
+                    &.active{
+                        //color: v(light);
+                        &::before{
+                            transform: scaleY(1);
+                            width: 100%;
+                        }
+                        
+                        .icon{
+                            &::before{
+                                background-color: v(light);
+                            }
+                        }
+                        span{
+                            color: v(light);
+                        }
+                    }
+                    &--dropdown{
+                        div{
+                            display: block;
+                            position: relative;
+                            ul{
+                                display: block;
+                                li{
+                                    a{
+                                        padding: 1rem;
+                                        background-color: v(light-grey);
+                                        text-decoration: none;
+                                        color: v(dark); 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }  
+                &.primary-link{
+                    font-weight: bold;
+                    .dropdown__link{
+                        &::before{
+                            background-color: v(color-1);
+                        }
+                        &.active{
+                            color: v(light);
+                        }
+                    }  
+                }
+                &.secondary-link{
+                    a{
+                        font-weight: 500;
+                    }
+                    .dropdown__link{
+                        border-left: 3px solid v(color-1);
+                        &::before{
+                            background-color: v(color-1);
+                        }
+                        &.active{
+                            color: v(light);
+                        }
+                    }  
+                }
+                &.tertiary-link{
+                    a{
+                        font-weight: 500;
+                    }
+                    .dropdown__link{
+                        border-left: 3px solid v(color-6);
+                        &:hover{
+                            color: v(light);
+                            .icon{
+                                &::before{
+                                    background-color: v(light);
+                                }
+                            }
+                            span{
+                                color: v(light);
+                            }
+                          
+                        }
+                        .icon{
+                            &::before{
+                                background-color: v(color-6);
+                            }
+                        }
+                        span{
+                            color: v(color-6);
+                        }
+                        
+                        &::before{
+                            background-color: v(color-6);
+                        }
+                        &.active{
+                            color: v(light);
+                        }
+                    }  
+                }   
+        }
+    }
+}

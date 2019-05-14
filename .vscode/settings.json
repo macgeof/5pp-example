@@ -1,0 +1,22 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html",
+        "razor": "html",
+        "plaintext": "jade"
+    },
+    "cSpell.words": [
+        "custom",
+        "devtools",
+        "extension",
+        "grypp",
+        "gsap",
+        "heroku",
+        "jsontransform",
+        "media",
+        "postbuild",
+        "redux",
+        "stylelint",
+        "typesafe"
+    ]
+}

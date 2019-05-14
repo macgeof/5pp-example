@@ -1,0 +1,196 @@
+.icon{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    //background-color: white;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left:50%;
+        width:70%;
+        height:70%;
+        transform: translate(-50%,-50%);
+        transition: all .3s linear;
+        //background: url(../img/sprite.svg#username) no-repeat 100% center;
+    }
+    &.username{
+        &::before{
+            mask: url(../img/sprite.svg#username) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.dd-arrow{
+        &::before{
+            background: url(../img/sprite.svg#dd-arrow) no-repeat 100% center;
+            width:50%;
+            height:50%;
+        }
+    }
+    &.dashboard{
+        &::before{
+            mask: url(../img/sprite.svg#dashboard) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+
+        }
+    }
+    &.system{
+        &::before{
+            mask: url(../img/sprite.svg#system) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+
+        }
+    }
+    &.plugins{
+        &::before{
+            mask: url(../img/sprite.svg#plugins) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+
+        }
+    }
+    &.tags{
+        &::before{
+            mask: url(../img/sprite.svg#tags) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+
+        }
+    }
+    &.metrics{
+        &::before{
+            mask: url(../img/sprite.svg#metrics) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.mode{
+        &::before{
+            mask: url(../img/sprite.svg#mode) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.connections{
+        &::before{
+            mask: url(../img/sprite.svg#connections) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.users{
+        &::before{
+            mask: url(../img/sprite.svg#users) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.users-all{
+        &::before{
+            mask: url(../img/sprite.svg#users-all) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.users-new{
+        &::before{
+            mask: url(../img/sprite.svg#users-new) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.users-upload{
+        &::before{
+            mask: url(../img/sprite.svg#users-upload) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+    &.company{
+        &::before{
+            mask: url(../img/sprite.svg#company) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.documents{
+        &::before{
+            mask: url(../img/sprite.svg#documents) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.documents-add{
+        &::before{
+            mask: url(../img/sprite.svg#documents-add) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.documents-edit{
+        &::before{
+            mask: url(../img/sprite.svg#documents-edit) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.metrics-summary{
+        &::before{
+            mask: url(../img/sprite.svg#metrics-summary) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.confirm{
+        &::before{
+            mask: url(../img/sprite.svg#confirm) no-repeat 100% center;
+            width:90%;
+            height:90%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.add{
+        &::before{
+            mask: url(../img/sprite.svg#add) no-repeat 100% center;
+            width:30%;
+            height:30%;
+            background-color: v(color-1);
+        }
+    }
+
+    &.close{
+        &::before{
+            mask: url(../img/sprite.svg#close) no-repeat 100% center;
+            width:30%;
+            height:30%;
+            background-color: v(color-1);
+        }
+    }
+}

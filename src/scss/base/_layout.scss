@@ -1,0 +1,64 @@
+main{
+    position: relative;
+    
+}
+
+.grid{
+    display: grid;
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;  
+    position: relative;
+    // Default Grid
+    grid-template-columns:  [full-start] minmax(6rem,1fr) [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] minmax(6rem,1fr) [full-end];  
+    
+
+    @include respond(tab-port){
+        grid-template-columns:  [full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+    }
+
+    @include respond(phone){
+        // Grid for mobile
+        grid-template-columns:  [full-start] 1.5rem [center-start] repeat(4, [col-start] 1fr [col-end]) [center-end] 1.5rem [full-end];
+    }
+
+    &__full-width{
+        grid-column: full-start / full-end;
+    }
+    &__container{
+        grid-column: center-start / center-end;
+    }
+
+    &__inner{
+        height: inherit;
+        display: grid;
+        grid-column-gap: .5rem;
+        grid-row-gap: .5rem;  
+        position: relative;
+        // Default Grid
+        grid-template-columns:  [full-start] minmax(6rem,1fr) [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] minmax(6rem,1fr) [full-end];  
+        
+        @include respond(tab-port){
+            grid-template-columns:  [full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+        }
+
+        @include respond(phone){
+            // Grid for mobile
+            grid-template-columns:  [full-start] 1.5rem [center-start] repeat(4, [col-start] 1fr [col-end]) [center-end] 1.5rem [full-end];
+        }
+        &--full-width{
+            grid-column: full-start / full-end;
+        }
+        &--container{
+            grid-column: center-start / center-end;
+        }
+        &--align-items-center{
+            align-items: center;
+        }
+    }
+
+}
+
+
+
+
+

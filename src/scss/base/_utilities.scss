@@ -1,0 +1,28 @@
+.u-light{
+    color: v(light);
+}
+
+.u-margin-right-sm{
+    margin-right: v(xs-size);
+} 
+
+.u-margin-left-sm{
+    margin-left: v(xs-size);
+}
+
+.upload-label{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    font-size: v(upload-label);
+    line-height: 5rem;
+}
+
+@include respond(phone){
+    .u-hide-mob{
+        display: none;
+    }
+}
+
+.u-padding-top-from-nav{
+    padding-top: v(header-padding);
+}

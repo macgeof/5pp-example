@@ -1,0 +1,81 @@
+.button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: v(color-1);
+    transition: transform .3s linear;
+    font-size: v(btn-font-size);
+    font-weight: v(btn-font-weight);
+    &:disabled{
+        cursor: default;
+    }
+    &:focus{
+        outline: none;
+    }
+    &:active{
+        transform: translateY(.5rem);
+    }
+
+    &__navToggle{
+        width: 2.5rem;
+        height:2rem;
+        background-color: transparent;
+        position: relative;
+        span{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            &,
+            &::before,
+            &::after {
+                width: 100%;
+                height: 2px;
+                display: inline-block;
+                transition: all .3s;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                background-color:v(light);
+            }
+            &.show{
+                background-color:v(light);
+                transition: background-color .3s .3s linear;
+                &::before {
+                    top: -.8rem;
+                    transform: rotate(0deg);
+                    transition: top .3s .3s linear, transform .3s linear;
+                    transform-origin: center;
+                }
+                &::after {
+                    top: .8rem;
+                    transform: rotate(0deg);
+                    transition: top .3s .3s linear, transform .3s linear;
+                    transform-origin: center;
+                }
+            }
+            &.hide{
+                background-color: transparent;
+                transition: background-color .3s .1s linear;
+                &::before {
+                    background-color:v(light);
+                    top: 0;
+                    transform: rotate(135deg);
+                    transition: top .3s linear, transform .3s .3s linear;
+                    transform-origin: center;
+                }
+                &::after {
+                    background-color:v(light);
+                    top: 0;
+                    transform: rotate(-135deg);
+                    transition: top .3s linear, transform .3s .3s linear;
+                    transform-origin: center;
+                }
+            }
+            
+        }  
+    }
+}

@@ -1,0 +1,44 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    //background-color: v(color-1);
+    overflow: hidden;
+    &::after{
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: v(color-1);
+        z-index: -1;
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: -33%;
+        width:auto;
+        height:134%;
+        object-fit:cover;
+        z-index: -1;
+        transform: rotateX(180deg);
+        &--confirm{
+            .st0{fill:#EFEFEF;}
+            .st1{fill:#173D7A;}
+            .st2{fill:#396CAA;}
+            .st3{fill:#274F89;}
+            .st4{fill:#D4ECFF;}
+            .st5{fill:#FFFFFF;}
+            .st6{fill:#5793CE;}
+            .st7{fill:#B9DFF9;}
+            .st8{fill:#FF2C9C;}
+            .st9{fill:#0A2D60;}
+            .st10{fill:#D3008D;}
+        }
+    }
+    &__form{
+        grid-column: col-start 7 / center-end;
+        background-color: red;
+    }  
+}

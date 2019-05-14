@@ -1,0 +1,25 @@
+.ui-nav{
+    position: fixed;
+    overflow-y: scroll;
+    top: v(header-height);
+    height: 100vh;
+    background-color: v(light);
+    min-width: 20rem;
+    left:0;
+    box-shadow: v(right-shadow);
+    transition: transform .3s linear;
+    border-color: transparent!important;
+    *{
+        text-align:left;
+    }
+    ul {
+        list-style-type: square;
+    }
+    &.hidden{
+        transform: translate3d(-100%, 0, 0);
+        
+    }
+    &.show{
+        transform: translate3d(0, 0, 0);
+    }
+}

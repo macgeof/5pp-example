@@ -1,0 +1,49 @@
+/* Cross browser reset */
+*,
+*::after,
+*::before {
+    margin:0px;
+    padding:0px; 
+    box-sizing: inherit; /* auto inherit box-sizing to everything */
+    //cursor: url('/img/circle-shape-outline.svg'), auto;
+    &:disabled{
+        cursor: default;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+/* set root font size */
+html {
+    // defines what 1 rem is 
+    /* I want 1 rem to work out to be 10px 10/16*100 = 62.5% - this is the size I will use for default styling (desktop) */
+    font-size: 62.5%; /* makes 10px based on browser being default 16px */  
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: v(app-font);
+}  
+
+//I wanted to add some of my own styles to defualt settings
+::selection {
+}
+
+body{
+}
+
+
+
+
+
+
+
+
+
+

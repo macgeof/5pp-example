@@ -1,0 +1,23 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:99;
+    height: v(header-height);
+    display: grid;
+    grid-template-columns: repeat(3, 33.3333333%);
+    background-color: v(color-2);
+    padding: 0 1rem ;
+    box-sizing: border-box;
+    box-shadow: v(bottom-shadow);
+    & >  * { 
+        align-self: center 
+    }
+    & > *:nth-child(2){
+        justify-self: center;
+    }
+    & > *:nth-child(3){
+        justify-self: end;
+    }
+}

@@ -1,0 +1,58 @@
+@custom-media --viewport-small-phone (max-width: 20em); // 320px / 16
+@custom-media --viewport-phone (max-width: 37.5em); // 600px / 16
+@custom-media --viewport-tab-port (max-width : 56.25em); //900px / 16
+@custom-media --viewport-tab-land (max-width : 81.25em); //1200px / 16
+@custom-media --viewport-big-desk (min-width : 112.5em); // 1800px / 16
+
+:root{
+  // Fonts
+  --app-font : 'Montserrat', sans-serif;
+
+  //font-sizes:
+  --btn-font-size : 1.6rem;
+  --anchor-font-size : 1.4rem;
+
+
+  // font weights
+  --btn-font-weight : bold;
+  --anchor-font-weight : regular;
+  --percentage: 25;
+  --opacity: calc(var(--percentage) * 0.01);
+  
+  //Sizes and spaces
+  --heading-1-size: 3.2rem;
+  --xl-size: 4.8rem;
+  --l-size: 3.2rem;
+  --m-size : 1.6rem;
+  --xs-size : .5rem;
+
+  --upload-label : 2rem;
+
+  --header-height: 6rem;
+
+  --header-padding: 10rem;
+
+  // Break points
+  --desktop: 45rem;
+ 
+  // Application Colours
+  --color-1: #180D5B;
+  --color-2: #173D7B;
+  --color-3: #5197C4;
+  --color-4: #D4ECFF;
+  --color-5: #FF2197;
+  --color-6: #D3008D;
+
+  --light: white;
+  --dark: black;
+  
+  --grey: #707070;
+  --middle-grey: #9F9F9F;
+  --light-grey: #CCCCCC;
+
+
+  //Shadows
+  --right-shadow: .3rem 0 1.5rem rgba(0,0,0,.15);
+  --bottom-shadow: 0 .3rem 1.5rem rgba(0,0,0,.15);
+  
+}

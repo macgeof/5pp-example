@@ -1,0 +1,42 @@
+// Media query manager
+/*
+    best breakpoints to use after researching on http://gs.statcounter.com/screen-resolution-stats#monthly-201704-201804-bar
+    0- 600px - Phone
+    600 - 900px - tablet portrait
+    900 - 1200px - tablet landscape
+    1200 - 1800px is where my normal styles apply
+    1800 + big desktop
+    $breakpoint argument choices
+    - phone
+    - tab-port
+    - tab-land
+    - big-desk
+
+    em's are the best to use for media queries not rem's 
+    1em = 16px
+
+    ORDER for adding media queries - Base + typography > general layout + grid > page layout >> components
+*/
+@mixin respond($breakpoint) {
+    //small phone
+    @if $breakpoint == small-phone{
+        @media only screen and (--viewport-small-phone){ @content };// 320px / 16
+    }
+    // phone
+    @if $breakpoint == phone {
+        @media only screen and (--viewport-phone) { @content }; // 600px / 16
+    }
+    // tablet portrait
+    @if $breakpoint == tab-port {
+        @media only screen and (--viewport-tab-port) { @content }; //900px / 16
+    }
+    // tablet landscape
+    @if $breakpoint == tab-land {
+        @media only screen and (--viewport-tab-land) { @content }; //1200px / 16
+    }
+    // big desktop
+    @if $breakpoint == big-desk {
+        @media only screen and (--viewport-big-desk) { @content }; // 1800px / 16
+    }
+}
+
